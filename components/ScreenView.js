@@ -1,17 +1,19 @@
 import React from 'react';
-import ScreenView from './components/ScreenView';
 
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-    return (
-        <View style={styles.container}>
-            <ScreenView />
-            <ScreenView />
-        </View>
-    );
-}
 
+class ScreenView extends React.Component {
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.Text}>NANANJA  .NANI !!!!</Text>
+            </View>
+
+        )
+    }
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -24,3 +26,5 @@ const styles = StyleSheet.create({
         fontSize:48,
     }
 });
+
+export default ScreenView;
