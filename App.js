@@ -1,38 +1,18 @@
 import React from 'react';
-import ScreenView from './components/ScreenView';
-
-import { StyleSheet, View } from 'react-native';
-
-export default function App() {
-
-    return (
-        <View style={highViewClass.container}>
-            <ScreenView text="1" styles={highViewClass}/>
-            <ScreenView text="2" styles={lowViewClass}/>
-        </View>
-    );
-}
+import Homepage from  './components/Homepage';
+import AnimationViewPage from "./components/AnimationViewPage";
+import ThirdPage from "./components/ThirdPage";
 
 
-const highViewClass = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#9b6508',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: "100%",
-    },
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
+const MainNavigator = createStackNavigator({
+    Home: {screen: Homepage},
+    DoubleView: {screen: AnimationViewPage},
+    ThirdPage: {screen: ThirdPage},
 });
 
+const App = createAppContainer(MainNavigator);
 
-
-const lowViewClass = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#83281f',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: "100%",
-    },
-});
+export default App;
