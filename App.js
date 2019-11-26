@@ -5,22 +5,32 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <ScreenView />
-            <ScreenView />
+        <View style={highViewClass.container}>
+            <ScreenView text="1" styles={highViewClass}/>
+            <ScreenView text="2" styles={lowViewClass}/>
         </View>
     );
 }
 
 
-const styles = StyleSheet.create({
+const highViewClass = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'orange',
+        backgroundColor: '#5dade2',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    Text: {
-        fontSize:48,
-    }
+
+});
+
+
+
+const lowViewClass = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#58d68d',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: "100%",
+    },
 });

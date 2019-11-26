@@ -7,24 +7,21 @@ class ScreenView extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.Text}>NANANJA  .NANI !!!!</Text>
+            <View style={this.props.styles.container}>
+                <Text style={TextClass.Text}>{this.props.text}</Text>
             </View>
 
         )
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'orange',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    Text: {
-        fontSize:48,
-    }
-});
+
 
 export default ScreenView;
+
+const TextClass = StyleSheet.create({
+    Text: {
+        fontSize:48,
+        color: "#000"
+    }
+});
