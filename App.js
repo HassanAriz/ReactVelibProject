@@ -1,9 +1,10 @@
 import React from 'react';
 import ScreenView from './components/ScreenView';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function App() {
+
     return (
         <View style={highViewClass.container}>
             <ScreenView text="1" styles={highViewClass}/>
@@ -16,9 +17,10 @@ export default function App() {
 const highViewClass = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#5dade2',
+        backgroundColor: '#9b6508',
         alignItems: 'center',
         justifyContent: 'center',
+        width: "100%",
     },
 
 });
@@ -28,7 +30,7 @@ const highViewClass = StyleSheet.create({
 const lowViewClass = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#58d68d',
+        backgroundColor: '#83281f',
         alignItems: 'center',
         justifyContent: 'center',
         width: "100%",
