@@ -4,7 +4,9 @@ import ScreenView from "./ScreenView";
 
 class AnimationViewPage extends React.Component {
 
-
+    static navigationOptions = {
+        title: 'View',
+    };
     render() {
         return (
             <View style={highViewClass.container}>

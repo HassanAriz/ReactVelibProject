@@ -4,7 +4,7 @@ import {Button, View } from "react-native";
 class Homepage extends React.Component {
 
     static navigationOptions = {
-        title: 'Welcome',
+        title: 'HomePage',
     };
 
     render() {
@@ -18,9 +18,9 @@ class Homepage extends React.Component {
             />
 
             <Button
-        title="hello"
-        onPress={() => navigate('ThirdPage')}
-        />
+                title="hello"
+                onPress={() => navigate('ThirdPage')}
+            />
         </View>
         )
     }
